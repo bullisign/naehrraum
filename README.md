@@ -1,5 +1,3 @@
-# nährraum – Website (Übergabe)
-
 ## Struktur
 - `index.html` – Startseite
 - `leistungen.html` – Leistungen (Reiter: Eltern / Einrichtungen / Online & Vor Ort)
