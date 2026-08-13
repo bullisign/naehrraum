@@ -19,19 +19,19 @@ import RelatedPosts from '../../components/RelatedPosts.vue'
     </div>
 
     <div class="post-body">
-      <p>Eben noch aß dein Kind fast alles – und plötzlich landet jeder zweite Teller unangetastet auf dem Tisch? Wählerisches Essverhalten, auch „Picky Eating“ genannt, ist eine der häufigsten Entwicklungsphasen im Kleinkindalter. Die gute Nachricht: In den meisten Fällen ist es völlig normal.</p>
+      <p>Eben noch aß dein Kind fast alles und plötzlich landet jeder zweite Teller unangetastet auf dem Tisch? Wählerisches Essverhalten, auch „Picky Eating“ genannt, ist eine der häufigsten Entwicklungsphasen im Kleinkindalter. Die gute Nachricht: In den meisten Fällen ist es völlig normal.</p>
 
       <h2>1. Es ist ein normaler Entwicklungsschritt</h2>
-      <p>Zwischen dem zweiten und sechsten Lebensjahr durchlaufen viele Kinder eine Phase erhöhter Vorsicht gegenüber Neuem – ein evolutionär sinnvoller Schutzmechanismus, der als Neophobie bezeichnet wird.</p>
+      <p>Zwischen dem zweiten und sechsten Lebensjahr durchlaufen viele Kinder eine Phase erhöhter Vorsicht gegenüber Neuem, ein evolutionär sinnvoller Schutzmechanismus, der als Neophobie bezeichnet wird.</p>
 
       <h2>2. Kontrolle über den eigenen Körper</h2>
-      <p>Essen ist einer der wenigen Bereiche, in denen Kinder früh selbst entscheiden können. Ablehnung kann daher auch Ausdruck von Autonomie sein – nicht zwingend ein Zeichen für ein „Problem“.</p>
+      <p>Essen ist einer der wenigen Bereiche, in denen Kinder früh selbst entscheiden können. Ablehnung kann daher auch Ausdruck von Autonomie sein, nicht zwingend ein Zeichen für ein „Problem“.</p>
 
       <h2>3. Sensorische Empfindlichkeit</h2>
       <p>Manche Kinder reagieren stärker auf Konsistenz, Geruch oder Temperatur von Speisen. Das ist keine Marotte, sondern eine individuelle Wahrnehmung, die ernst genommen werden sollte.</p>
 
       <h2>4. Druck am Esstisch</h2>
-      <p>Paradoxerweise kann Druck – „iss noch einen Bissen“ – die Ablehnung verstärken. Kinder spüren Erwartungshaltung sehr genau und reagieren oft mit noch mehr Verweigerung.</p>
+      <p>Paradoxerweise kann Druck, „iss noch einen Bissen“, die Ablehnung verstärken. Kinder spüren Erwartungshaltung sehr genau und reagieren oft mit noch mehr Verweigerung.</p>
 
       <h2>5. Fehlende Routine oder Vorbild</h2>
       <p>Regelmäßige, gemeinsame Mahlzeiten und das Vorbild der Eltern spielen eine große Rolle dabei, wie entspannt Kinder Neues ausprobieren.</p>
@@ -45,7 +45,7 @@ import RelatedPosts from '../../components/RelatedPosts.vue'
       </ul>
 
       <h2>Mein Fazit als Ernährungsberaterin</h2>
-      <p>Picky Eating ist in den allermeisten Fällen eine Phase – kein Versagen der Eltern. Mit Geduld, Routine und dem richtigen Wissen lässt sich der Druck am Esstisch spürbar reduzieren.</p>
+      <p>Picky Eating ist in den allermeisten Fällen eine Phase, kein Versagen der Eltern. Mit Geduld, Routine und dem richtigen Wissen lässt sich der Druck am Esstisch spürbar reduzieren.</p>
 
       <div class="quote-block" style="margin-top:40px; padding:36px;">
         <span class="accent" style="font-size:1.3rem;">Dein Kind isst seit Monaten nur noch wenige Dinge?</span>

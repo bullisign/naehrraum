@@ -15,14 +15,14 @@ import RelatedPosts from '../../components/RelatedPosts.vue'
     </div>
 
     <div class="card-photo" style="max-width:900px; margin:-40px auto 0; aspect-ratio:16/8; position:relative; z-index:2;">
-      <img src="https://images.unsplash.com/photo-1557939663-0619f304af9c?auto=format&fit=crop&w=1200&q=80" alt="Baby beim eigenständigen Essen im Hochstuhl – Baby-led Weaning">
+      <img src="https://images.unsplash.com/photo-1557939663-0619f304af9c?auto=format&fit=crop&w=1200&q=80" alt="Baby beim eigenständigen Essen im Hochstuhl, Baby-led Weaning">
     </div>
 
     <div class="post-body">
-      <p>Der Beikoststart ist für viele Eltern eine der ersten großen Entscheidungen in der Ernährung ihres Kindes: Brei mit dem Löffel oder Baby-led Weaning (BLW), bei dem das Baby von Anfang an mit den Händen isst? Die gute Nachricht vorweg: Es gibt kein „richtig“ oder „falsch“ – beide Wege können gut funktionieren, wenn ein paar Grundregeln beachtet werden.</p>
+      <p>Der Beikoststart ist für viele Eltern eine der ersten großen Entscheidungen in der Ernährung ihres Kindes: Brei mit dem Löffel oder Baby-led Weaning (BLW), bei dem das Baby von Anfang an mit den Händen isst? Die gute Nachricht vorweg: Es gibt kein „richtig“ oder „falsch“, beide Wege können gut funktionieren, wenn ein paar Grundregeln beachtet werden.</p>
 
       <h2>Was ist der Unterschied?</h2>
-      <p>Beim klassischen Breikonzept wird das Baby mit pürierter Nahrung gefüttert – meist beginnend mit einem Gemüse- oder Getreidebrei. Bei Baby-led Weaning bekommt das Baby von Beginn an weiche, mundgerechte Stücke, die es selbstständig greifen und essen kann. Viele Familien kombinieren heute beide Ansätze – das nennt sich „gemischter Beikoststart“.</p>
+      <p>Beim klassischen Breikonzept wird das Baby mit pürierter Nahrung gefüttert, meist beginnend mit einem Gemüse- oder Getreidebrei. Bei Baby-led Weaning bekommt das Baby von Beginn an weiche, mundgerechte Stücke, die es selbstständig greifen und essen kann. Viele Familien kombinieren heute beide Ansätze, das nennt sich „gemischter Beikoststart“.</p>
 
       <h2>Vorteile von Brei</h2>
       <ul>
@@ -39,10 +39,10 @@ import RelatedPosts from '../../components/RelatedPosts.vue'
       </ul>
 
       <h2>Worauf du in jedem Fall achten solltest</h2>
-      <p>Unabhängig von der Methode gilt: Dein Baby sollte sicher sitzen können, Interesse am Essen zeigen und die Nahrung sollte altersgerecht vorbereitet sein, um das Erstickungsrisiko zu minimieren. Bei Unsicherheiten – gerade rund um Allergien, Risikolebensmittel oder wenn dein Kind Vorerkrankungen hat – lohnt sich eine individuelle Beratung.</p>
+      <p>Unabhängig von der Methode gilt: Dein Baby sollte sicher sitzen können, Interesse am Essen zeigen und die Nahrung sollte altersgerecht vorbereitet sein, um das Erstickungsrisiko zu minimieren. Bei Unsicherheiten, gerade rund um Allergien, Risikolebensmittel oder wenn dein Kind Vorerkrankungen hat, lohnt sich eine individuelle Beratung.</p>
 
       <h2>Mein Fazit als Ernährungsberaterin</h2>
-      <p>Die beste Methode ist die, die zu eurem Alltag und eurem Kind passt. Es muss keine Entweder-oder-Entscheidung sein – viele Familien, die ich begleite, kombinieren beide Ansätze und finden so ihren eigenen, entspannten Weg in die Beikost.</p>
+      <p>Die beste Methode ist die, die zu eurem Alltag und eurem Kind passt. Es muss keine Entweder-oder-Entscheidung sein, viele Familien, die ich begleite, kombinieren beide Ansätze und finden so ihren eigenen, entspannten Weg in die Beikost.</p>
 
       <div class="quote-block" style="margin-top:40px; padding:36px;">
         <span class="accent" style="font-size:1.3rem;">Unsicher, welcher Weg zu eurem Kind passt?</span>

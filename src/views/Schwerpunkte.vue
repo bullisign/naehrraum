@@ -25,9 +25,9 @@ const tabs = [
           <div class="tab-content">
             <div>
               <h2 id="beikost">Beikost &amp; Familienkost</h2>
-              <p>Der Übergang zur festen Nahrung ist ein wichtiger Entwicklungsschritt – und oft mit Unsicherheit verbunden. nährraum zeigt dir, wie Beikost entspannt und sicher gelingen kann.</p>
+              <p>Der Übergang zur festen Nahrung ist ein wichtiger Entwicklungsschritt und oft mit Unsicherheit verbunden. nährraum zeigt dir, wie Beikost entspannt und sicher gelingen kann.</p>
               <ul>
-                <li><i class="fa-solid fa-check"></i> Beikoststart – wann und wie?</li>
+                <li><i class="fa-solid fa-check"></i> Beikoststart, wann und wie?</li>
                 <li><i class="fa-solid fa-check"></i> BLW vs. Brei: Vor- und Nachteile</li>
                 <li><i class="fa-solid fa-check"></i> Übergang zur Familienkost</li>
               </ul>
@@ -40,7 +40,7 @@ const tabs = [
           <div class="tab-content">
             <div>
               <h2 id="picky">Picky Eating</h2>
-              <p>Wählerisches Essverhalten ist in der kindlichen Entwicklung häufig – aber im Alltag oft belastend. Hier lernst du, Verhalten einzuordnen und entspannter zu begleiten.</p>
+              <p>Wählerisches Essverhalten ist in der kindlichen Entwicklung häufig, aber im Alltag oft belastend. Hier lernst du, Verhalten einzuordnen und entspannter zu begleiten.</p>
               <ul>
                 <li><i class="fa-solid fa-check"></i> Wählerisches Essverhalten verstehen</li>
                 <li><i class="fa-solid fa-check"></i> Umgang mit Essverweigerung</li>
@@ -74,7 +74,7 @@ const tabs = [
           <div class="tab-content">
             <div>
               <h2 id="darm">Darmgesundheit &amp; Mikrobiom</h2>
-              <p>Wie Ernährung, Darmflora und Entwicklung zusammenhängen – einfach erklärt für Eltern, mit konkreten Ansätzen für den Alltag.</p>
+              <p>Wie Ernährung, Darmflora und Entwicklung zusammenhängen, einfach erklärt für Eltern, mit konkreten Ansätzen für den Alltag.</p>
               <ul>
                 <li><i class="fa-solid fa-check"></i> Aufbau eines gesunden Mikrobioms</li>
                 <li><i class="fa-solid fa-check"></i> Ballaststoffe &amp; Vielfalt im Kindesalter</li>
@@ -94,7 +94,7 @@ const tabs = [
   <section class="bg-sand cta-band">
     <div class="container text-center">
       <h2>Nicht sicher, welcher Schwerpunkt passt?</h2>
-      <p>Kein Problem – im kostenlosen Erstgespräch ordnen wir eure Situation gemeinsam ein.</p>
+      <p>Kein Problem, im kostenlosen Erstgespräch ordnen wir eure Situation gemeinsam ein.</p>
       <RouterLink to="/buchung" class="btn btn-primary">Kostenloses Erstgespräch <i class="fa-solid fa-calendar-check"></i></RouterLink>
     </div>
   </section>

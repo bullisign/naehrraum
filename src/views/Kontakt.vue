@@ -15,7 +15,7 @@ function submit() {
     <div class="container">
       <p class="eyebrow" style="color:var(--tinte)"><i class="fa-solid fa-envelope"></i> Kontakt</p>
       <h1 style="color:var(--tinte);">Schreib mir gerne</h1>
-      <p class="sub" style="color:var(--tinte); opacity:.85;">Für Fragen, individuelle Beratungsanfragen oder Vorträge für Einrichtungen – ich freue mich von dir zu hören.</p>
+      <p class="sub" style="color:var(--tinte); opacity:.85;">Für Fragen, individuelle Beratungsanfragen oder Vorträge für Einrichtungen, ich freue mich von dir zu hören.</p>
     </div>
   </section>
 
@@ -55,7 +55,7 @@ function submit() {
         <div class="card" style="margin-bottom:20px;">
           <div class="icon-tile tile-salbei"><i class="fa-solid fa-location-dot"></i></div>
           <h4>Region</h4>
-          <p style="margin:0;">Nürtingen, Baden-Württemberg – Beratung vor Ort im Umkreis von ca. 100 km (u. a. Stuttgart, Esslingen, Reutlingen, Tübingen). Online deutschlandweit.</p>
+          <p style="margin:0;">Nürtingen, Baden-Württemberg, Beratung vor Ort im Umkreis von ca. 100 km (u. a. Stuttgart, Esslingen, Reutlingen, Tübingen). Online deutschlandweit.</p>
         </div>
         <div class="card" style="margin-bottom:20px;">
           <div class="icon-tile tile-honig"><i class="fa-solid fa-envelope"></i></div>

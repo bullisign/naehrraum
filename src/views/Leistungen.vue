@@ -26,7 +26,7 @@ const tabs = [
           <div class="tab-content">
             <div>
               <h2>Individuelle Begleitung im Familienalltag</h2>
-              <p>Bei allen Fragen rund um Beikost, Essverhalten und Familienernährung – abgestimmt auf euer Kind und euren Alltag.</p>
+              <p>Bei allen Fragen rund um Beikost, Essverhalten und Familienernährung, abgestimmt auf euer Kind und euren Alltag.</p>
               <ul>
                 <li><i class="fa-solid fa-check"></i> Einstieg in Beikost</li>
                 <li><i class="fa-solid fa-check"></i> Wählerisches Essverhalten</li>
@@ -37,7 +37,7 @@ const tabs = [
             </div>
             <div class="card" style="background:var(--flieder-tint); border-color:transparent;">
               <div class="card-photo"><img src="https://images.unsplash.com/photo-1557939663-0619f304af9c?auto=format&fit=crop&w=700&q=80" alt="Kind isst selbstständig im Hochstuhl"></div>
-              <p style="font-weight:600; color:var(--tinte); margin:0;">„Ich brauchte keine starren Regeln – sondern jemanden, der versteht, warum meine Tochter isst, wie sie isst.“</p>
+              <p style="font-weight:600; color:var(--tinte); margin:0;">„Ich brauchte keine starren Regeln, sondern jemanden, der versteht, warum meine Tochter isst, wie sie isst.“</p>
             </div>
           </div>
         </template>
@@ -56,14 +56,14 @@ const tabs = [
             <div class="card" style="background:var(--honig-tint); border-color:transparent;">
               <div class="icon-tile tile-honig"><i class="fa-solid fa-chalkboard-user"></i></div>
               <h4>Für Kita &amp; Schule</h4>
-              <p>Praxisnahe Impulse für den pädagogischen Alltag – individuell zugeschnitten auf eure Einrichtung.</p>
+              <p>Praxisnahe Impulse für den pädagogischen Alltag, individuell zugeschnitten auf eure Einrichtung.</p>
             </div>
           </div>
         </template>
         <template #offline>
           <div class="tab-content">
             <div>
-              <h2>Ob online oder vor Ort – ganz wie es passt</h2>
+              <h2>Ob online oder vor Ort, ganz wie es passt</h2>
               <p>Begleitung ist sowohl online als auch vor Ort möglich, regional in Nürtingen und im Umkreis von ca. 100 km.</p>
               <ul>
                 <li><i class="fa-solid fa-check"></i> 1:1 Online-Beratung</li>
@@ -75,7 +75,7 @@ const tabs = [
             <div class="card" style="background:var(--terracotta-tint); border-color:transparent;">
               <div class="icon-tile tile-terracotta"><i class="fa-solid fa-map-location-dot"></i></div>
               <h4>Regional verwurzelt</h4>
-              <p>Nürtingen, Stuttgart, Esslingen, Reutlingen, Tübingen und Umgebung – ca. 100 km Umkreis.</p>
+              <p>Nürtingen, Stuttgart, Esslingen, Reutlingen, Tübingen und Umgebung, ca. 100 km Umkreis.</p>
             </div>
           </div>
         </template>
@@ -93,19 +93,19 @@ const tabs = [
         <div class="card">
           <div class="card-photo"><img src="https://images.unsplash.com/photo-1557939663-0619f304af9c?auto=format&fit=crop&w=700&q=80" alt="Beikost & Familienkost"></div>
           <h4>Beikost &amp; Familienkost</h4>
-          <p>Sicherer Start in die Beikost und entspannte Übergänge zur Familienkost – ohne Druck und mit klarer Orientierung.</p>
+          <p>Sicherer Start in die Beikost und entspannte Übergänge zur Familienkost, ohne Druck und mit klarer Orientierung.</p>
           <RouterLink to="/schwerpunkte#beikost" class="cta-link">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></RouterLink>
         </div>
         <div class="card">
           <div class="card-photo" style="background:var(--flieder-tint); display:flex; align-items:center; justify-content:center;"><i class="fa-solid fa-utensils" style="font-size:2.6rem; color:var(--flieder-dark);"></i></div>
           <h4>Picky Eating &amp; Essverhalten</h4>
-          <p>Wenn dein Kind plötzlich wählerisch wird oder kaum noch isst – verständlich erklärt und alltagstauglich begleitet.</p>
+          <p>Wenn dein Kind plötzlich wählerisch wird oder kaum noch isst, verständlich erklärt und alltagstauglich begleitet.</p>
           <RouterLink to="/schwerpunkte#picky" class="cta-link">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></RouterLink>
         </div>
         <div class="card">
           <div class="card-photo" style="background:var(--salbei-tint); display:flex; align-items:center; justify-content:center;"><i class="fa-solid fa-dna" style="font-size:2.6rem; color:var(--salbei-dark);"></i></div>
           <h4>Darmgesundheit &amp; Mikrobiom</h4>
-          <p>Wie Ernährung, Darmflora und Entwicklung zusammenhängen – einfach erklärt für Eltern.</p>
+          <p>Wie Ernährung, Darmflora und Entwicklung zusammenhängen, einfach erklärt für Eltern.</p>
           <RouterLink to="/schwerpunkte#darm" class="cta-link">Mehr erfahren <i class="fa-solid fa-arrow-right"></i></RouterLink>
         </div>
       </div>

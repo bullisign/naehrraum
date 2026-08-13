@@ -3,24 +3,20 @@ import { RouterLink } from 'vue-router'
 import { ref, reactive, computed } from 'vue'
 
 // ============================================================
-// nährraum – Buchungssystem
+// nährraum, Buchungssystem
 // Portiert von assets/js/booking.js zu Vue-Reaktivität.
 // Für den Live-Betrieb: state 1:1 an eine API übergeben (POST /api/booking)
 // oder an ein Buchungstool (Cal.com, SimplyBook, Amelia) anbinden.
 // ============================================================
 
 const services = [
-  { id: 'erst', name: 'Erstgespräch (kostenlos)', duration: '20 Min · Online', price: '0 €', desc: 'Unverbindliches Kennenlernen – wir klären, wie ich dich unterstützen kann.' },
+  { id: 'erst', name: 'Erstgespräch (kostenlos)', duration: '20 Min · Online', price: '0 €', desc: 'Unverbindliches Kennenlernen, wir klären, wie ich dich unterstützen kann.' },
   { id: 'einzel', name: '1:1 Beratung Beikost & Picky Eating', duration: '50 Min · Online oder vor Ort', price: '89 €', desc: 'Individuelle Begleitung bei Beikoststart, wählerischem Essverhalten oder Mahlzeiten-Stress.' },
   { id: 'folge', name: 'Folgetermin', duration: '30 Min · Online', price: '49 €', desc: 'Für Klient:innen in laufender Begleitung.' },
   { id: 'vortrag', name: 'Vortrag / Workshop anfragen', duration: 'nach Absprache · Einrichtungen & Kitas', price: 'auf Anfrage', desc: 'Für Kitas, Schulen und pädagogische Fachkräfte.' },
 ]
 
 const liaisonEmail = 'naehr.raum@web.de'
-
-function buildMailtoLink(to, subject, body) {
-  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-}
 
 const step = ref(1)
 const state = reactive({
@@ -101,65 +97,8 @@ const bookingSummaryTemplate = computed(() => {
   ].join('\n')
 })
 
-const liaisonMailLink = computed(() => {
-  const subject = `Neue Buchungsanfrage: ${state.service?.name || 'Leistung'}`
-  const body = [
-    'Hallo Lia,',
-    '',
-    'Es liegt eine neue Buchungsanfrage vor.',
-    '',
-    bookingSummaryTemplate.value || 'Keine Details vorhanden.',
-    '',
-    'Bitte prüfe die Anfrage und melde dich zeitnah.',
-    '',
-    'Viele Grüße,',
-    'nährraum Website',
-  ].join('\n')
-
-  return buildMailtoLink(liaisonEmail, subject, body)
-})
-
-const customerMailLink = computed(() => {
-  const subject = 'Ihre Anfrage bei nährraum ist eingegangen'
-  const body = [
-    `Hallo ${state.name || 'liebe/r Interessent:in'},`,
-    '',
-    'Danke für deine Anfrage bei nährraum.',
-    'Wir haben deine Nachricht erhalten und melden uns zeitnah bei dir.',
-    '',
-    `Gewählte Leistung: ${state.service?.name || 'Leistung'}`,
-    `Gewünschter Termin: ${state.date || 'wird vereinbart'} um ${state.time || '---'} Uhr`,
-    '',
-    'Viele Grüße,',
-    'Lia',
-    'nährraum',
-  ].join('\n')
-
-  return buildMailtoLink(state.email || '', subject, body)
-})
-
 function submitBooking() {
   submitted.value = true
-
-  try {
-    const customerMail = customerMailLink.value
-    const liaisonMail = liaisonMailLink.value
-
-    if (customerMail) {
-      const customerWindow = window.open(customerMail, '_blank', 'noopener,noreferrer')
-      if (customerWindow) customerWindow.opener = null
-    }
-
-    if (liaisonMail) {
-      setTimeout(() => {
-        const liaisonWindow = window.open(liaisonMail, '_blank', 'noopener,noreferrer')
-        if (liaisonWindow) liaisonWindow.opener = null
-      }, 150)
-    }
-  } catch (error) {
-    console.warn('Mailto-Flow konnte nicht gestartet werden:', error)
-  }
-
   goTo(4)
 }
 </script>
@@ -169,7 +108,7 @@ function submitBooking() {
     <div class="container">
       <p class="eyebrow" style="color:var(--tinte)"><i class="fa-solid fa-calendar-check"></i> Terminbuchung</p>
       <h1>Lass uns einen Termin finden</h1>
-      <p class="sub">Wähle eine Leistung, einen Termin, der passt, und trage dich ein – in wenigen Klicks.</p>
+      <p class="sub">Wähle eine Leistung, einen Termin, der passt, und trage dich ein, in wenigen Klicks.</p>
     </div>
   </section>
 
@@ -275,10 +214,9 @@ function submitBooking() {
               <h2>Anfrage gesendet!</h2>
               <p style="color:var(--tinte-soft); max-width:420px; margin:0 auto 24px;">
                 Danke! Deine Anfrage für <strong>{{ state.service?.name }}</strong> am <strong>{{ state.date }} um {{ state.time }} Uhr</strong> ist eingegangen.
-                Lia erhält eine Benachrichtigung unter <strong>{{ liaisonEmail }}</strong> und du erhältst eine Bestätigung an <strong>{{ state.email }}</strong>.
               </p>
               <div style="margin-top:18px; font-size:.9rem; color:var(--tinte-soft); line-height:1.6;">
-                Deine Anfrage wurde erfolgreich gesendet. Lia erhält die Nachricht direkt und du bekommst zeitnah eine kurze Bestätigung an deine E-Mail-Adresse.
+                Deine Anfrage wurde erfolgreich gesendet. Lia wird sich zeitnah bei dir melden.
               </div>
               <div style="margin-top:18px;">
                 <RouterLink to="/" style="text-decoration:underline; color:var(--tinte); font-weight:600;">Zur Startseite</RouterLink>
@@ -289,10 +227,6 @@ function submitBooking() {
         </div>
       </div>
 
-      <p style="text-align:center; font-size:.85rem; color:var(--tinte-soft); margin-top:20px;">
-        <i class="fa-solid fa-circle-info"></i> Hinweis für die Entwicklung: Dieses Buchungsformular ist funktional als Frontend-Demo umgesetzt.
-        Für den Live-Betrieb wird es an ein Buchungs-Backend (z. B. Cal.com, SimplyBook, Amelia) oder ein eigenes E-Mail-/Kalender-System angebunden.
-      </p>
     </div>
   </section>
 
@@ -305,7 +239,7 @@ function submitBooking() {
       </details>
       <details class="faq-item">
         <summary>Finden Beratungen auch vor Ort statt?<i class="fa-solid fa-plus"></i></summary>
-        <p>Ja, im Umkreis von ca. 100 km um Nürtingen (u. a. Stuttgart, Esslingen, Reutlingen, Tübingen) sind Termine vor Ort möglich – online geht es überall.</p>
+        <p>Ja, im Umkreis von ca. 100 km um Nürtingen (u. a. Stuttgart, Esslingen, Reutlingen, Tübingen) sind Termine vor Ort möglich, online geht es überall.</p>
       </details>
       <details class="faq-item">
         <summary>Wie kurzfristig kann ich einen Termin absagen?<i class="fa-solid fa-plus"></i></summary>
@@ -313,7 +247,7 @@ function submitBooking() {
       </details>
       <details class="faq-item">
         <summary>Bietet ihr auch Vorträge für Kitas an?<i class="fa-solid fa-plus"></i></summary>
-        <p>Ja – wähle dazu einfach „Vortrag / Workshop anfragen“ im ersten Schritt oder schreib mir über das <RouterLink to="/kontakt" style="text-decoration:underline;">Kontaktformular</RouterLink>.</p>
+        <p>Ja, wähle dazu einfach „Vortrag / Workshop anfragen“ im ersten Schritt oder schreib mir über das <RouterLink to="/kontakt" style="text-decoration:underline;">Kontaktformular</RouterLink>.</p>
       </details>
     </div>
   </section>
