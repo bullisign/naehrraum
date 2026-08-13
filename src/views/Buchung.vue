@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { ref, reactive, computed } from 'vue'
 
 // ============================================================
@@ -14,6 +15,12 @@ const services = [
   { id: 'folge', name: 'Folgetermin', duration: '30 Min · Online', price: '49 €', desc: 'Für Klient:innen in laufender Begleitung.' },
   { id: 'vortrag', name: 'Vortrag / Workshop anfragen', duration: 'nach Absprache · Einrichtungen & Kitas', price: 'auf Anfrage', desc: 'Für Kitas, Schulen und pädagogische Fachkräfte.' },
 ]
+
+const liaisonEmail = 'naehr.raum@web.de'
+
+function buildMailtoLink(to, subject, body) {
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+}
 
 const step = ref(1)
 const state = reactive({
@@ -78,8 +85,81 @@ const step2Valid = computed(() => !!(state.date && state.time))
 
 // ---- Formular / Bestätigung ----
 const submitted = ref(false)
+
+const bookingSummaryTemplate = computed(() => {
+  if (!state.service || !state.date || !state.time) return ''
+
+  return [
+    `Leistung: ${state.service.name}`,
+    `Termin: ${state.date} um ${state.time} Uhr`,
+    `Preis: ${state.service.price}`,
+    `Name: ${state.name}`,
+    `E-Mail: ${state.email}`,
+    `Telefon: ${state.phone || 'nicht angegeben'}`,
+    `Alter des Kindes: ${state.child || 'nicht angegeben'}`,
+    `Hinweise: ${state.notes || 'keine'}`,
+  ].join('\n')
+})
+
+const liaisonMailLink = computed(() => {
+  const subject = `Neue Buchungsanfrage: ${state.service?.name || 'Leistung'}`
+  const body = [
+    'Hallo Lia,',
+    '',
+    'Es liegt eine neue Buchungsanfrage vor.',
+    '',
+    bookingSummaryTemplate.value || 'Keine Details vorhanden.',
+    '',
+    'Bitte prüfe die Anfrage und melde dich zeitnah.',
+    '',
+    'Viele Grüße,',
+    'nährraum Website',
+  ].join('\n')
+
+  return buildMailtoLink(liaisonEmail, subject, body)
+})
+
+const customerMailLink = computed(() => {
+  const subject = 'Ihre Anfrage bei nährraum ist eingegangen'
+  const body = [
+    `Hallo ${state.name || 'liebe/r Interessent:in'},`,
+    '',
+    'Danke für deine Anfrage bei nährraum.',
+    'Wir haben deine Nachricht erhalten und melden uns zeitnah bei dir.',
+    '',
+    `Gewählte Leistung: ${state.service?.name || 'Leistung'}`,
+    `Gewünschter Termin: ${state.date || 'wird vereinbart'} um ${state.time || '---'} Uhr`,
+    '',
+    'Viele Grüße,',
+    'Lia',
+    'nährraum',
+  ].join('\n')
+
+  return buildMailtoLink(state.email || '', subject, body)
+})
+
 function submitBooking() {
   submitted.value = true
+
+  try {
+    const customerMail = customerMailLink.value
+    const liaisonMail = liaisonMailLink.value
+
+    if (customerMail) {
+      const customerWindow = window.open(customerMail, '_blank', 'noopener,noreferrer')
+      if (customerWindow) customerWindow.opener = null
+    }
+
+    if (liaisonMail) {
+      setTimeout(() => {
+        const liaisonWindow = window.open(liaisonMail, '_blank', 'noopener,noreferrer')
+        if (liaisonWindow) liaisonWindow.opener = null
+      }, 150)
+    }
+  } catch (error) {
+    console.warn('Mailto-Flow konnte nicht gestartet werden:', error)
+  }
+
   goTo(4)
 }
 </script>
@@ -195,9 +275,14 @@ function submitBooking() {
               <h2>Anfrage gesendet!</h2>
               <p style="color:var(--tinte-soft); max-width:420px; margin:0 auto 24px;">
                 Danke! Deine Anfrage für <strong>{{ state.service?.name }}</strong> am <strong>{{ state.date }} um {{ state.time }} Uhr</strong> ist eingegangen.
-                Eine Bestätigung geht in Kürze an <strong>{{ state.email }}</strong>.
+                Lia erhält eine Benachrichtigung unter <strong>{{ liaisonEmail }}</strong> und du erhältst eine Bestätigung an <strong>{{ state.email }}</strong>.
               </p>
-              <RouterLink to="/" class="btn btn-outline">Zurück zur Startseite</RouterLink>
+              <div style="margin-top:18px; font-size:.9rem; color:var(--tinte-soft); line-height:1.6;">
+                Deine Anfrage wurde erfolgreich gesendet. Lia erhält die Nachricht direkt und du bekommst zeitnah eine kurze Bestätigung an deine E-Mail-Adresse.
+              </div>
+              <div style="margin-top:18px;">
+                <RouterLink to="/" style="text-decoration:underline; color:var(--tinte); font-weight:600;">Zur Startseite</RouterLink>
+              </div>
             </div>
           </div>
 

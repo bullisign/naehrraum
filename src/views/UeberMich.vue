@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
   <section class="page-hero hero-terracotta">
     <div class="container hero-grid" style="align-items:center;">
@@ -6,8 +10,8 @@
         <h1 style="color:var(--tinte);">Hey, ich bin Lia.</h1>
         <p class="sub" style="color:var(--tinte); opacity:.85;">Fachkraft für Picky Eating, Ernährungsberaterin – und selbst Mama. Meine Tochter machte mich zur Expertin für wählerisches Essverhalten, lange bevor ich es beruflich wurde.</p>
       </div>
-      <div class="blob-photo" style="background:var(--flieder); display:flex; align-items:center; justify-content:center;">
-        <i class="fa-solid fa-user" style="font-size:5rem; color:var(--flieder-dark);" aria-hidden="true"></i>
+      <div class="blob-photo" style="background:var(--flieder); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+        <img src="/Lia_Shooting_7.png" alt="Lia, Ernährungsberaterin und Mama" loading="eager" style="width:100%; height:calc(100% + 25px); object-fit:cover; display:block; transform:translate(-15px, -35px);">
       </div>
     </div>
   </section>
@@ -32,7 +36,7 @@
           </div>
           <div class="card" style="flex-direction:row; align-items:center; gap:16px; padding:20px;">
             <div class="icon-tile tile-honig" style="margin:0;"><i class="fa-solid fa-hands-holding-child"></i></div>
-            <div><strong>Über 100 begleitete Familien</strong><p style="margin:0; font-size:.9rem;">Individuelle Beratung online &amp; vor Ort in der Region Nürtingen</p></div>
+            <div><strong>Glückliche Familien und Kinder</strong><p style="margin:0; font-size:.9rem;">Individuelle Beratung online &amp; vor Ort in der Region Nürtingen</p></div>
           </div>
         </div>
       </div>

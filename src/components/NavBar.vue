@@ -16,7 +16,6 @@ const close = () => { open.value = false }
         <RouterLink to="/schwerpunkte" @click="close">Schwerpunkte</RouterLink>
         <RouterLink to="/ueber-mich" @click="close">Über mich</RouterLink>
         <RouterLink to="/blog" @click="close">Blog</RouterLink>
-        <RouterLink to="/kontakt" @click="close">Kontakt</RouterLink>
       </nav>
       <div class="nav-cta">
         <RouterLink to="/buchung" class="btn btn-primary btn-sm">

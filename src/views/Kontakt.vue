@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { ref, reactive } from 'vue'
 
 const form = reactive({ name: '', email: '', topic: '1:1 Beratung', message: '', consent: false })

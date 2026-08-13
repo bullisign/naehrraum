@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import RelatedPosts from '../../components/RelatedPosts.vue'
 </script>
 

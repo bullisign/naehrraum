@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { posts } from '../data/posts'
 import BlogCard from '../components/BlogCard.vue'
 </script>
@@ -21,7 +22,6 @@ import BlogCard from '../components/BlogCard.vue'
         <div class="blob-photo">
           <img src="https://images.unsplash.com/photo-1557939663-0619f304af9c?auto=format&fit=crop&w=900&q=80" alt="Baby isst selbstständig im Hochstuhl – Beikost im Familienalltag" loading="eager">
         </div>
-        <div class="hero-badge"><i class="fa-solid fa-star" style="color:var(--honig-dark)"></i> Über 5 Jahre Erfahrung in der kindlichen Ernährungsberatung</div>
       </div>
     </div>
   </section>

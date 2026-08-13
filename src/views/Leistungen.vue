@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import TabGroup from '../components/TabGroup.vue'
 const tabs = [
   { key: 'eltern', label: 'Für Eltern' },

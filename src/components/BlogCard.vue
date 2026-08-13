@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 defineProps({ post: { type: Object, required: true } })
 </script>
 
